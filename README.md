@@ -1,26 +1,36 @@
 # ecommerce-analysis
-#  Customer Analytics & Segmentation Project
 
-##  Project Overview
+#  E-Commerce Analytics Project
 
-This project focuses on **customer analytics and segmentation** using real-world eCommerce data from the Olist dataset.
+##  Overview
 
-The objective is to analyze customer distribution and behavior, and apply **Machine Learning  to segment customers based on engagement patterns.
-
----
-
-##  Objectives
-
-* Understand customer distribution by **state and city**
-* Identify **unique vs repeat customers**
-* Perform **data cleaning and preprocessing**
-* Build a **customer segmentation model**
-* Create a **Power BI dashboard** for business insights
-
----
+This project analyzes eCommerce data to extract business insights, perform customer segmentation, and visualize sales trends.
 
 ##  Dataset
-* File used: `olist_customers_dataset.csv`
+
+Brazilian E-Commerce Dataset (Olist) from Kaggle.
+
+##  Tech Stack
+
+* Python (Pandas, Matplotlib, Scikit-learn)
+* SQL
+* Power BI
+
+##  Workflow
+
+1. Data Collection
+2. Data Cleaning & Transformation
+3. Exploratory Data Analysis
+4. Machine Learning (Customer Segmentation)
+5. Dashboard Visualization
+
+##  Key Insights
+
+* Top-performing states contribute majority revenue
+* Seasonal spikes observed in sales
+* Customer segmentation identifies high-value customers
+---
+
 
 ### Columns:
 
@@ -34,7 +44,7 @@ The objective is to analyze customer distribution and behavior, and apply **Mach
 
 ---
 
-## 🏗️ Project Architecture
+##  Project Architecture
 
 ```
 CSV Data → Python (Cleaning & Feature Engineering) → ML Model → SQL → Power BI Dashboard
@@ -42,16 +52,6 @@ CSV Data → Python (Cleaning & Feature Engineering) → ML Model → SQL → Po
 
 ---
 
-## 🧹 Data Cleaning Steps
-
-* Removed duplicate records
-* Standardized text fields (city, state)
-* Converted ZIP code to numeric format
-* Checked and handled missing values
-
----
-
-## 📊 Exploratory Data Analysis (EDA)
 
 Key analysis performed:
 
@@ -61,7 +61,7 @@ Key analysis performed:
 
 ---
 
-## ⚙️ Feature Engineering
+##  Feature Engineering
 
 Created new features for ML:
 
@@ -70,7 +70,7 @@ Created new features for ML:
 
 ---
 
-## 🤖 Machine Learning Model
+##  Machine Learning Model
 
 ### Algorithm Used:
 
@@ -136,19 +136,14 @@ Created new features for ML:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * Python (Pandas, NumPy)
 * Scikit-learn (KMeans, StandardScaler)
 * SQL
 * Power BI
 * Matplotlib / Seaborn
-
----
-
-## 👤 Author
-       Revathy
-* Data Analytics Project
-  
-
----
+* 
+👤 Author
+    Revathy
+=
