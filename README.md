@@ -16,7 +16,7 @@ A data analysis project built on the [Olist public e-commerce dataset](https://w
 │   └── dash.pbix             # Power BI dashboard file
 ├── reports/
 │   └── datacleaning.html     # Exported notebook report
-└── sql/                      # SQL queries (in progress)
+└── sql/                      # SQL queries
 ```
 
 ---
