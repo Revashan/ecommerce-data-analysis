@@ -75,7 +75,7 @@ The dataset contains multiple relational tables:
 
 ### 1. Executive E-Commerce Summary
 
-![Executive Summary](powerbi/screenshots/electricity_malpractice_dashboard.png)
+![Executive Summary](powerbi/screenshots/ecommerce_olist_dashboard.png)
 
 visuals:
 
