@@ -1,151 +1,128 @@
-# Brazilian E-Commerce Analysis (Olist Dataset)
+# E-Commerce Analytics — Olist Dataset
 
-A data analysis project built on the [Olist public e-commerce dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), covering order processing, customer behavior, product performance, and payment trends across Brazil.
-
----
-
-## Project Structure
-
-```
-├── data/
-│   ├── raw/                  # Original Olist CSV files
-│   └── processed/            # Cleaned and merged dataset
-├── notebooks/
-│   └── datacleaning.ipynb    # Data cleaning and preprocessing
-├── powerbi/
-│   └── dash.pbix             # Power BI dashboard file
-├── reports/
-│   └── datacleaning.html     # Exported notebook report
-└── sql/                      # SQL queries
-```
+An end-to-end **e-commerce business intelligence** project using the Brazilian Olist public dataset. The project analyses orders, revenue, customers, products, payments, delivery performance, review scores, and regional sales behaviour.
 
 ---
 
+## Business Problem
+
+E-commerce businesses need to understand sales performance, customer behaviour, product demand, payment preferences, delivery delays, and review performance.
+
+This project helps answer:
+
+- Which states and cities generate the highest revenue?
+- Which product categories perform best?
+- How do payment methods affect order behaviour?
+- Are delivery delays affecting customer reviews?
+- Which customer groups or regions should be targeted for growth?
+- How can the business improve repeat purchase and average order value?
+
+---
 
 ## Dataset
 
-The raw data consists of 8 relational tables from Olist:
+This project uses the **Brazilian E-Commerce Public Dataset by Olist**.
 
-| File | Description |
-|------|-------------|
-| `olist_customers_dataset.csv` | Customer location and ID info |
-| `olist_orders_dataset.csv` | Order status and timestamps |
-| `olist_order_items_dataset.csv` | Items per order with pricing |
-| `olist_order_payments_dataset.csv` | Payment type and installments |
-| `olist_order_reviews_dataset.csv` | Customer review scores |
-| `olist_products_dataset.csv` | Product dimensions and category |
-| `olist_sellers_dataset.csv` | Seller location info |
-| `olist_geolocation_dataset.csv` | ZIP code geolocation data |
+Dataset source:
+
+```
+Olist Brazilian E-Commerce Public Dataset
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+```
+
+The dataset contains multiple relational tables:
+
+| Table | Description |
+|---|---|
+| `olist_orders_dataset.csv` | Order status and order timestamps |
+| `olist_customers_dataset.csv` | Customer ID and location details |
+| `olist_order_items_dataset.csv` | Product-level order items and price |
+| `olist_order_payments_dataset.csv` | Payment type and instalment information |
+| `olist_order_reviews_dataset.csv` | Review score and customer feedback |
+| `olist_products_dataset.csv` | Product category and product attributes |
+| `olist_sellers_dataset.csv` | Seller information |
+| `olist_geolocation_dataset.csv` | Brazilian zip code geolocation data |
 
 ---
 
-## Data Cleaning
+## Tools Used
 
-Handled in `notebooks/datacleaning.ipynb`:
+- **Python**: data cleaning, merging relational datasets, EDA
+- **SQL**: sales, customer, product, and delivery analysis
+- **Power BI**: executive dashboard and business insights
+- **DAX**: revenue, AOV, order count, delivery metrics
 
-- Merged orders, customers, items, products, and payments into a single flat table
-- Standardized date columns and extracted `year` and `month` features
-- Filled or flagged missing product category names as `unknown`
-- Removed duplicates and irrelevant columns
-- Output saved to `data/processed/cleaned_ecommerce.csv`
+---
 
-**Tools used:** Python, pandas, numpy, matplotlib, seaborn, scikit-learn
+## Key KPIs
+
+| KPI | Business Meaning |
+|---|---|
+| Total Revenue | Total item/payment revenue generated |
+| Total Orders | Number of customer orders |
+| Average Order Value | Revenue divided by orders |
+| Total Customers | Unique customers |
+| Repeat Customer Rate | Repeat customers divided by total customers |
+| Average Delivery Days | Average delivery time |
+| On-Time Delivery % | Delivered within estimated delivery date |
+| Average Review Score | Customer satisfaction indicator |
+| Revenue by State | Regional sales contribution |
+| Top Product Categories | Highest performing product groups |
 
 ---
 
 ## Power BI Dashboard
 
-The cleaned dataset was loaded into Power BI to build an interactive executive dashboard.
+### 1. Executive E-Commerce Summary
 
-### Overview Dashboard
+![Executive Summary](powerbi/screenshots/electricity_malpractice_dashboard.png)
 
-![Ecommerce Dashboard Overview](https://github.com/Revashan/ecommerce-data-analysis/blob/main/powerbi/dashboard-screenshot/Ecommerce_dashboard_overview.png)
+visuals:
 
-### Executive Dashboard
+- Total revenue
+- Total orders
+- Average order value
+- Total customers
+- Average review score
+- Monthly revenue trend
+- Orders by state
+- Revenue by product category
 
-![Ecommerce Executive Dashboard](https://github.com/Revashan/ecommerce-data-analysis/blob/main/powerbi/dashboard-screenshot/Ecommerce_exec_dashboard.png)
+## Key Insights
 
-The dashboard covers:
-- Revenue and order trends over time
-- Top product categories by sales
-- Customer distribution by state
-- Payment method breakdown
-- Delivery performance metrics
+1. Revenue is likely concentrated in a few high-demand states, so regional performance should be analysed separately instead of only viewing national totals.
 
-The `.pbix` file is available at `powerbi/dash.pbix`.
+2. A small number of product categories usually contribute a large portion of total revenue, while long-tail categories may generate low volume.
+
+3. Delivery performance can influence review score, especially where actual delivery exceeds estimated delivery date.
+
+4. Payment method behaviour can reveal customer affordability patterns, especially where instalment payments are common.
+
+5. Repeat customer behaviour should be monitored because one-time buyers limit long-term revenue growth.
 
 ---
 
-## Getting Started
-
-1. Clone the repo
-2. Create a virtual environment and install dependencies:
-   ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn jupyter
-   ```
-3. Run `notebooks/datacleaning.ipynb` to reproduce the cleaned dataset
-4. Open `powerbi/dash.pbix` in Power BI Desktop to explore the dashboard
-
-  ## Key Business Insights
-   1. Revenue Concentration
-A small number of states contribute majority of total revenue
- Insight: Business is geographically
-
-2.Product Performance
-Few categories generate most revenue
-Long-tail categories contribute very little
-
-3.Customer Behavior
-Majority of customers are one-time buyers
-Repeat customers form a small but high-value segment
-
-4.Sales Trend
-Sales show seasonal spikes
-Certain months outperform significantly
-
-5.Revenue vs Orders
-High number of orders does not always mean high revenue
-
-## Advanced Insights
-1.Customer Segmentation
-
-Using clustering:
-
-## High-value customers
-Medium-value customers
-Low-value customers
-
-## Order Value Distribution
-Most orders are low to medium value
-Few high-value outliers
-
 ## Business Recommendations
-🔹 1. Improve Customer Retention
-Launch loyalty programs
-Offer discounts for repeat purchases
-Personalized marketing campaigns
 
-2.Focus on High-Performing Regions
-Increase marketing in top states
-Expand logistics in high-demand areas
+| Area | Recommendation | Business Impact |
+|---|---|---|
+| Regional Growth | Increase marketing and seller support in top-performing states | Improves revenue concentration strategy |
+| Product Strategy | Promote high-performing categories and review low-margin/low-volume categories | Improves product portfolio focus |
+| Delivery | Track delayed orders by state and seller | Improves customer satisfaction |
+| Customer Retention | Launch loyalty campaigns for customers with repeated purchases | Improves repeat purchase rate |
+| AOV Growth | Offer bundles and free shipping threshold | Increases average order value |
+| Review Improvement | Investigate low-review categories and delayed delivery areas | Improves customer experience |
 
-3.Optimize Product Strategy
-Promote top-performing categories
-Reduce low-performing inventory
+---
 
-4.Increase Average Order Value (AOV)
-Bundle products
-Offer free shipping above threshold
-Cross-sell related products
+## This Project Demonstrates
 
-5.Seasonal Campaign Planning
-Run promotions during peak months
-Prepare inventory in advance
-
-6.Target High-Value Customers
-VIP programs for top customers
-Exclusive deals
-
+- Multi-table dataset preparation
+- E-commerce KPI analysis
+- Power BI executive dashboarding
+- Customer and product analytics
+- Delivery performance analysis
+- Business recommendation writing
 
 ## Author
 Revathy Shanmugaraj
