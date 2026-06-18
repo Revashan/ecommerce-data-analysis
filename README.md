@@ -103,12 +103,12 @@ K-means clustering applied to identify three customer tiers:
 ### Overview Dashboard
 Revenue and order trends over time · Top product categories by sales · Customer distribution by Brazilian state · Payment method breakdown.
 
-[![Dashboard Overview](powerbi/screenshot/ecommerce_olist_dashboard.png)
+[![Dashboard Overview](powerbi/screenshots/ecommerce_olist_dashboard.png)
 
 ### Executive Dashboard
 Delivery performance metrics · Customer segment revenue split · Seasonal trend analysis · Regional performance comparison.
 
-[![Executive Dashboard](powerbi/screenshot/Ecommerce_exec_dashboard)
+[![Executive Dashboard](powerbi/screenshots/Ecommerce_exec_dashboard)
 
 Open `powerbi/dash.pbix` in Power BI Desktop and connect to `data/processed/cleaned_ecommerce.csv`.
 
