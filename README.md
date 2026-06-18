@@ -108,7 +108,7 @@ Revenue and order trends over time · Top product categories by sales · Custome
 ### Executive Dashboard
 Delivery performance metrics · Customer segment revenue split · Seasonal trend analysis · Regional performance comparison.
 
-[![Executive Dashboard](powerbi/Ecommerce_exec_dashboard)
+[![Executive Dashboard](powerbi/screenshot/Ecommerce_exec_dashboard)
 
 Open `powerbi/dash.pbix` in Power BI Desktop and connect to `data/processed/cleaned_ecommerce.csv`.
 
